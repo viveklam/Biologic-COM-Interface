@@ -32,7 +32,7 @@ This will remove the BTLab COM object from the windows registry.
 After verifying that COM object is seen within the windows registry, we will next get a Type Library (TLB) file. A TLB file is a binary file that contains metadata about the interfaces, methods, etc exposed by the COM object to provide a standardized way for different programming languages and development tools to understand how to interact with the COM component. We will first open OLE/COM Viewer (oleviewer.exe) as administrator. This program should have been installed with the Windows SDK and should be located in: \Program Files (x86)\Windows Kits\10\[version]\[architecture]\oleview.exe. You should be able to find BTLabCOM under the Type Libraries folder as shown below:
 ![image of BTLab in Registry Editor](graphics/BTLab_oleviewer.png)
 
-Double clicking on this item will open it in the ITypeLib Viewer where we will be able to save the file as an *.idl file in the working directory of our choice as shown below:
+Double clicking on this item will open it in the ITypeLib Viewer where we will be able to save the file as an *.idl file in the working directory of our choice (as seen below). In this github I have included my example *idl that you can open to see the methods exposed by the COM object at the time of writing this tutorial.:
 ![image of BTLab in Registry Editor](graphics/BTLab_itypelib.png)
 
 
