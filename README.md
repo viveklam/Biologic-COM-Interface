@@ -46,9 +46,11 @@ This will generate the *.tlb file in the same directory.
 
 ### Using the Type Library File to Interact in a Programming Language
 #### Python
-In python you can run the below code to create the COM Object:
+In python you can run the below code to create the COM Object (will likely need to pip install comtypes):
 
 ```Python
+import comtypes.client
+
 # Replace with the actual path
 typeLib = comtypes.client.GetModule("Path_to_tlb.tlb")
 comObject = comtypes.client.CreateObject(typeLib.BTLabExe)
