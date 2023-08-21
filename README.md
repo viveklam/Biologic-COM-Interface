@@ -56,7 +56,7 @@ typeLib = comtypes.client.GetModule("Path_to_tlb.tlb")
 comObject = comtypes.client.CreateObject(typeLib.BTLabExe)
 ```
 
-Once the COM Object is made you can call any of the functions that were defined in the *.idl file. For further Documentation on these functions contact a Biologic service representative for their OLE/COM documentation
+Once the COM object is made you can call any of the functions that were defined in the *.idl file. For further Documentation on these functions contact a Biologic service representative for their OLE/COM documentation
 ```Python
 settingFile = "Setting_file_path.mps"
 device = 0
@@ -68,3 +68,9 @@ When done with the COM object you can free the memory with:
 ```Python
 del comObject
 ```
+
+#### Batch Start Functionality
+
+Now that we have the basics down of connecting to the COM object and sending it commands, we can perform more advanced functions like batch starting channels with different setting files. In the example shown below I am using the BTLabChannelStartList.csv file which contains a list of the settings file and output file for each channel I want to run. The code in biologicAutomation.ipynb loads in this csv and programmatically assigns settings files and output files to each channel and runs them. Click the below image for the video walkthrough:
+[![](https://img.youtube.com/vi/dTyfNcylDpQ/0.jpg)](https://www.youtube.com/watch?v=dTyfNcylDpQ)
+
