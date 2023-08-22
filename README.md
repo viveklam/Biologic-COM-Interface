@@ -74,3 +74,6 @@ del comObject
 Now that we have the basics down of connecting to the COM object and sending it commands, we can perform more advanced functions like batch starting channels with different setting files. In the example shown below I am using the BTLabChannelStartList.csv file which contains a list of the settings file and output file for each channel I want to run. The code in biologicAutomation.ipynb loads in this csv and programmatically assigns settings files and output files to each channel and runs them. Click the below image for the video walkthrough:
 [![](https://img.youtube.com/vi/dTyfNcylDpQ/0.jpg)](https://www.youtube.com/watch?v=dTyfNcylDpQ)
 
+
+Note:
+- The settings file must result in no errors or options that require user input (such as the multiple current ranges error) otherwise it will be stuck in modify mode and will fail to both run the file as well as load any additional settings files prior to exiting modify mode.
